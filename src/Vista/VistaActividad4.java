@@ -49,6 +49,11 @@ public class VistaActividad4 extends javax.swing.JFrame {
         jLabel2.setText("Ingresar la cadena (menos de 80 digitos)");
 
         txtIngresarCadena.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtIngresarCadena.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIngresarCadenaKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Contenido en vocales");
 
@@ -146,6 +151,13 @@ public class VistaActividad4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtIngresarCadenaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIngresarCadenaKeyTyped
+        // TODO add your handling code here:
+        if (txtIngresarCadena.getText().length() >= 80) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtIngresarCadenaKeyTyped
 
     /**
      * @param args the command line arguments
