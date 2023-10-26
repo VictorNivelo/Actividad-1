@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Victor
@@ -156,6 +158,7 @@ public class VistaActividad4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (txtIngresarCadena.getText().length() >= 80) {
             evt.consume();
+            JOptionPane.showMessageDialog(null, "Maximo 80 caracteres");
         }
     }//GEN-LAST:event_txtIngresarCadenaKeyTyped
 
